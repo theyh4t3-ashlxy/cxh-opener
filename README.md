@@ -4,3 +4,21 @@ a powershell script which lets u choose which cxhs u want
 >[!WARNING]
 >you probably should NOT do any enterprise things (like azure or entra) on your personal computer.  
 > if you do, i will laugh at u :3
+
+# how do i use this, ashley?
+
+simple:  
+u dont.
+
+just kidding 
+
+what u need is powershell 7 and above (if it exists)  
+u need to either have the powershell terminal or the windows uwp terminal one  
+
+run this:  
+`powershell -ExecutionPolicy Bypass -File C:\Users\yourmother\Downloads\Launch-CXH.ps1`  
+and hope that it doesnt explode ur pc / laptop  
+
+choose a number you'd like (e.g, `2`)  
+kaboom  
+now u got an account creation one
