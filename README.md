@@ -1,9 +1,13 @@
 # cxh-opener
 a powershell script which lets u choose which cxhs u want  
 
->[!WARNING]
->you probably should NOT do any enterprise things (like azure or entra) on your personal computer.  
-> if you do, i will laugh at u :3
+> [!WARNING]
+> you probably should NOT do any enterprise things (like azure or entra) on your personal computer.  
+> if you do, i will laugh at u :3  
+
+> [!WARNING]
+> this is FULLY ai vibe coded btw. if you hate ai and you are an anti ai, get out of here before you backlash at me.  
+> i used gemini 3.1 pro for this  
 
 # how do i use this, ashley?
 
