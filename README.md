@@ -15,8 +15,11 @@ just kidding
 what u need is powershell 7 and above (if it exists)  
 u need to either have the powershell terminal or the windows uwp terminal one  
 
-run this:  
-`powershell -ExecutionPolicy Bypass -File C:\Users\yourmother\Downloads\Launch-CXH.ps1`  
+run this:
+```powershell
+powershell -ExecutionPolicy Bypass -File C:\Users\yourmother\Downloads\launch-CXH.ps1
+```
+
 and hope that it doesnt explode ur pc / laptop  
 
 choose a number you'd like (e.g, `2`)  
