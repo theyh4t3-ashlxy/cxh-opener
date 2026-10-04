@@ -23,6 +23,12 @@ run this:
 ```powershell
 powershell -ExecutionPolicy Bypass -File C:\Users\yourmother\Downloads\launch-CXH.ps1
 ```
+or.. the `curl -fsSL | zsh` way..
+
+```powershell
+irm https://raw.githubusercontent.com/theyh4t3-ashlxy/cxh-opener/refs/heads/main/Launch-CXH.ps1 | iex
+```
+
 
 and hope that it doesnt explode ur pc / laptop  
 
