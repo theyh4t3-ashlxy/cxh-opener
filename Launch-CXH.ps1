@@ -75,6 +75,14 @@ $cxh = [ordered]@{
     "58" = @{ cmd = "tset/addfamily";                          desc = "microsoft family safety user add";        tag = "modern settings & misc" }
     "59" = @{ cmd = "wlt";                                     desc = "windows license terms (wlt)";             tag = "modern settings & misc" }
     "60" = @{ cmd = "wltuc";                                   desc = "windows license terms uc";                tag = "modern settings & misc" }
+
+    # unhinged dev relics & easter eggs (new in v2.3)
+    "61" = @{ cmd = "frxhololens";                             desc = "hololens oobe (2015 retro blue portal)";  tag = "unhinged dev relics & easter eggs" }
+    "62" = @{ cmd = "frxhololenscortana";                      desc = "dormant cortana setup flow (2017 relic)"; tag = "unhinged dev relics & easter eggs" }
+    "63" = @{ cmd = "xboxconnect";                             desc = "xbox console sign-in bridge";             tag = "unhinged dev relics & easter eggs" }
+    "64" = @{ cmd = "test";                                    desc = "ms dev sandbox (navigates to bing.com)";  tag = "unhinged dev relics & easter eggs" }
+    "65" = @{ cmd = "frx/inclusive?start=OobeGamepass";         desc = "direct game pass subscription upsell";    tag = "unhinged dev relics & easter eggs" }
+    "66" = @{ cmd = "frx/inclusive?start=OobeOffice";           desc = "direct microsoft 365 / office upsell";    tag = "unhinged dev relics & easter eggs" }
 }
 
 $fullscreen = $false
@@ -99,7 +107,7 @@ while ($true) {
     clear-host
     $proto = if ($fullscreen) { "ms-cxh-full://" } else { "ms-cxh://" }
 
-    write-host "cloud experience host hijacker v2.2" -foregroundcolor magenta
+    write-host "cloud experience host hijacker v2.3" -foregroundcolor magenta
     write-host "active protocol: " -nonewline
     write-host $proto -foregroundcolor yellow
     write-host " (toggle with 'f')`n" -foregroundcolor darkgray
@@ -163,7 +171,6 @@ while ($true) {
         }
         $target = $custom.trim()
     } elseif ($cxh.keys -contains $inputval) {
-        # this actually works for ordered dictionaries unlike my previous "fix"
         $target = $cxh[$inputval].cmd
     } elseif ($inputval -match '^[a-zA-Z0-9_\-\/\?\=\%]+$' -and $inputval -notmatch '^\d+$') {
         $target = $inputval
@@ -180,13 +187,20 @@ while ($true) {
 
         write-host "`n[>] launching $finaluri..." -foregroundcolor green
 
+        # easter egg / warning callouts
         if ($cleantarget -match "localonly") {
             write-host " [?] just a gentle heads-up: microsoft politely discontinued this in recent builds. if nothing happens, it's not you, it's satya nadella's vision for a connected future. :)" -foregroundcolor darkyellow
+        } elseif ($cleantarget -match "frxhololens") {
+            write-host " [?] opening a 3d holographic setup wizard on a flat 2d monitor. prepare for 2015 time travel and three empty bullet points. :)" -foregroundcolor darkcyan
+        } elseif ($cleantarget -match "xboxconnect") {
+            write-host " [?] launching the console flow. please try not to crash any retail xboxes in the wild." -foregroundcolor darkgreen
+        } elseif ($cleantarget -eq "test") {
+            write-host " [?] loading microsoft's internal dev test. if you see bing.com, congratulations, edge is working." -foregroundcolor cyan
         }
 
         try {
             start-process $finaluri -erroraction stop
-            write-host " [+] payload delivered. if it hangs, just press 'k' when you get back to clear it out." -foregroundcolor cyan
+            write-host " [+] payload delivered. remember: ctrl + shift + j opens the underground dev console!" -foregroundcolor cyan
         } catch {
             write-host " [-] windows gently declined your request: $_" -foregroundcolor red
         }
