@@ -1,13 +1,12 @@
-# cxh-opener
-a powershell script which lets u choose which cxhs u want  
-
 > [!WARNING]
-> you probably should NOT do any enterprise things (like azure or entra) on your personal computer.  
+> you should NOT do any enterprise things (like azure or retail mode experience [thats what rdx stands for i think]) on your personal computer.  
 > if you do, i will laugh at u :3  
 
+a powershell script which lets u open one of the few _c_ loud _h_ ost e _x_ periences  
+(yes the spaces were needed so ya know what it stands for)
+
 > [!WARNING]
-> this is FULLY ai vibe coded btw. if you hate ai and you are an anti ai, get out of here before you backlash at me.  
-> i used gemini 3.1 pro for this  
+> this is FULLY ai vibe coded btw. if you hate ai and you are an anti ai, get outta my sight.
 
 # how do i use this, ashley?
 
