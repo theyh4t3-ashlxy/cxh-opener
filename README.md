@@ -16,7 +16,7 @@ u dont.
 
 just kidding 
 
-what u need is powershell 7 and above (if it exists)  
+what u need is powershell 5 and above (if it exists)
 u need to either have the powershell terminal or the windows uwp terminal one  
 
 run this:
